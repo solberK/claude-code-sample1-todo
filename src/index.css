@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .todo-checkbox {
+    @apply w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0 flex items-center justify-center cursor-pointer transition-all duration-200;
+  }
+  .todo-checkbox.checked {
+    @apply bg-indigo-500 border-indigo-500;
+  }
+  .todo-checkbox:hover:not(.checked) {
+    @apply border-indigo-400;
+  }
+}
